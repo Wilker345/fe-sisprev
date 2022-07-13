@@ -30,7 +30,7 @@ export default function MenuAppBar() {
   };
 
   const finishSession = () =>{
-    Axios.get('http://localhost:3002/logout')
+    Axios.get('http://localhost:3002/users/logout')
     setUser(null)
     localStorage.removeItem('user')
     handleClose()

@@ -21,7 +21,7 @@ export function Login (){
     setUser(JSON.parse(localStorage.getItem('user')))
   }
   useEffect( () =>{
-      Axios.get('http://localhost:3002/user').then(response => {
+      Axios.get('http://localhost:3002/users/user').then(response => {
       try{
         localStorage.setItem('user', JSON.stringify(response.data))
         setUser(JSON.parse(localStorage.getItem('user')))
@@ -50,7 +50,7 @@ export function Login (){
     history.push('/table');
   };
   const googleLogin = async () => {
-    const googleLoginURL = 'http://localhost:3002/auth/google'
+    const googleLoginURL = 'http://localhost:3002/users/auth/google'
     window.open(googleLoginURL, "_self")
 
   }

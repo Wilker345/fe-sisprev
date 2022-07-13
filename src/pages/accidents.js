@@ -19,7 +19,7 @@ export default function Accidents() {
   const [treinamento, setTreinamento] = useState(false)
   const { DateTime } = require("luxon");
 
-  useEffect(() => { 
+  /*useEffect(() => { 
     Axios.get("http://localhost:3002/companies").then((response)=>{
       setListaEmpresas(response.data.data)
     })
@@ -37,7 +37,7 @@ export default function Accidents() {
           console.log('Usuário não encontrado', e)
         }
     })
-  }, [])
+  }, [])*/
   useEffect(() => {
     if (table === 'treinamento'){
       setTreinamento(true)
